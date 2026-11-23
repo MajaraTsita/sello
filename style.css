@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+.top{
+  background: darkslategray;
+  padding: 15px;
+  color: white;
+}
+.top .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+.links a{
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+.links a:hover{
+  color: yellow;
+}
+
+.hero {
+  background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('images-4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.white-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card {
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.travel-img {
+  width: 100%;
+  border-radius: 8px;
+}
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.btn-custom {
+  background: darkslategray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.btn-custom:hover {
+  background: yellow;
+  color: black;
+}
+
+
+.site-footer {
+  background: darkslategray;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+.map-frame {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.hero-images {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.hidden-box {
+  display: none;
+}
+
+#myModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#modalImg {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+#closeModal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .hero-images { flex-direction: column; }
+  .hero { padding: 30px 15px; }
+}
+@media (max-width: 1024px) and (min-width: 601px) {
+  .hero h1 { font-size: 28px; }
+}
+body.dark-mode{
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode .white-box,
+body.dark-mode .card{
+  background-color: #222;
+  color: white;
+}
+
+body.dark-mode .hero{
+  background-color: black;
+}
+
+body.dark-mode footer{
+  background-color: black;
+}

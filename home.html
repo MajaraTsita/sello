@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesotho Travel - Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="top">
+      <div class="container">
+      <a href="home.html" class="logo">Lesotho Travel</a>
+      <div class="links">
+          <a href="Home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </ul>
+      <button id="darkBtn" class="btn btn-warning btn-sm ms 2">Dark Mode</button>
+
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="container mt-4">
+  <p id="welcomeMsg" class="fw-bold"></p>
+  <div class="alert alert-success">Welcome to Lesotho — The Kingdom in the Sky! <span class="badge bg-warning text-dark">New</span></div>
+
+  <section class="hero">
+    <h1>Discover Lesotho</h1>
+    <p>Mountains, Waterfalls, Culture & Adventure</p>
+    <a href="services.html" class="btn btn-custom">Book a Tour</a>
+    <a href="gallery.html" class="btn btn-light ms-2">View Gallery</a>
+  </section>
+
+  <section class="row mt-4">
+    <article class="col-md-4"><div class="card p-3">
+      <h3>Mountains</h3>
+      <p>Explore the Maluti Mountains, hiking and pony trekking.</p>
+      <a href="services.html" class="btn btn-custom">Learn More</a>
+    </div>
+  </article>
+
+    <article class="col-md-4">
+      <div class="card p-3">
+        <h3>Waterfalls</h3>
+        <p>Visit Maletsunyane Falls, one of Africa's highest waterfalls.</p>
+        <a href="gallery.html" class="btn btn-custom">See Photos</a>
+      </div>
+    </article>
+
+    <article class="col-md-4">
+      <div class="card p-3">
+        <h3>Culture</h3>
+        <p>Experience Basotho blankets, mokorotlo hats and traditional dance.</p>
+        <a href="about.html" class="btn btn-custom">About Lesotho</a>
+      </div>
+    </article>
+  </section>
+
+  <aside class="white-box mt-4">
+    <h3>Why Visit Lesotho?</h3>
+    <ul>
+      <li>Only country in the world entirely above 1000m</li>
+      <li>Best skiing in Southern Africa at Afriski</li>
+      <li>Friendly people and rich culture</li>
+    </ul>
+  </aside>
+ </div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Lesotho Travel</p>
+</footer>
+
+<script>
+  
+  if(localStorage.getItem('dark')=== 'on'){
+    document.body.classList.add('dark-mode');
+  }
+
+  document.getElementById('darkBtn').onclick = function(){
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('dark','on');
+    }else{
+      localStorage.setItem('dark off');
+    }
+  };
+</script>
+</body>
+</html>
